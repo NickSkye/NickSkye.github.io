@@ -17,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
-              <caret line="86" column="10" lean-forward="true" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
+            <state relative-caret-position="321">
+              <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -76,6 +76,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="renewlandscapes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="renewlandscapes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="renewlandscapes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -174,12 +188,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517264597133</updated>
-      <workItem from="1517264602198" duration="651000" />
+      <workItem from="1517264602198" duration="926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="651000" />
+    <option name="totallyTimeSpent" value="926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2070" y="57" width="1754" height="1053" extended-state="0" />
@@ -464,10 +478,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding>
+            <marker date="1517264533000" expanded="true" signature="45:144" ph="{&quot;ease&quot;: Power2.easeInOut...}" />
+            <marker date="1517264533000" expanded="true" signature="196:3320" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="296:346" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="403:619" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="660:709" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="755:804" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="857:906" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="976:1086" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="1148:1250" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="1298:1347" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="1390:1440" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="1483:1532" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="1573:1670" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="1741:2390" ph="{&quot;delegate&quot;: &quot;a&quot;...}" />
+            <marker date="1517264533000" expanded="true" signature="1869:2077" ph="{&quot;arrowMarkup&quot;: '&lt;button title=&quot;%title%&quot; type=&quot;button&quot; class=&quot;mfp-arrow mfp-arrow-%dir% gallery-arrow&quot;&gt;&lt;/button&gt;'...}" />
+            <marker date="1517264533000" expanded="true" signature="2090:2386" ph="{&quot;closeMarkup&quot;: '&lt;button title=&quot;%title%&quot; class=&quot;mfp-close gallery-close&quot; style=&quot;position: absolute; top: 30px; right: -15px&quot;&gt;&lt;img src=&quot;/Content/images/close-icon.png&quot; width=&quot;25&quot; height=&quot;29&quot;/&gt;&lt;/button&gt;'...}" />
+            <marker date="1517264533000" expanded="true" signature="2183:2226" ph="..." />
+            <marker date="1517264533000" expanded="true" signature="2448:2607" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="2486:2540" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="2546:2603" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="2641:2890" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="2939:3076" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="2962:3072" ph="{...}" />
+            <marker date="1517264533000" expanded="true" signature="3081:3318" ph="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="86" column="10" lean-forward="true" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
+        <state relative-caret-position="321">
+          <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
           <folding />
         </state>
       </provider>
