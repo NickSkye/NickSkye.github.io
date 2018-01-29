@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ReNew</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+
+  <!-- Google fonts -->
+
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:100' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Material Design -->
+  <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.green-light_green.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+
+  <!-- GreenSock -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+
+  <script src="https://use.typekit.net/zte2fuo.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <!-- Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-79167322-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- <style>
+    .header .right-content .top {
+      width: 90%;
+    }
+  </style> -->
+  <script>
+    $(document).ready(function () {
+
+      $('#toggle-apply-inside-menu').click(function () {
+        $('#overlay-apply').toggleClass('open');
+      });
+
+      $('#apply-close').click(function () {
+        $('#overlay-apply').removeClass('open');
+      });
+    });
+  </script>
+
+</head>
+
+<body class="careerspage">
+  <!-- menu -->
+  <div class="button_container" id="toggle">
+    <p>MENU</p>
+  </div>
+
+  <div class="overlay-right" id="overlay-right">
+    <nav class="overlay-menu">
+      <a href="about.html">
+        <span class="top-left">ABOUT</span>
+      </a>
+      <a href="difference.html">
+        <span class="top-right">DIFFERENCE</span>
+      </a>
+      <a href="services.html">
+        <span class="secondRow-right">SERVICES</span>
+      </a>
+      <a href="design.html">
+        <span class="secondRow-left">DESIGN</span>
+      </a>
+      <a href="commercial.html">
+        <span class="thirdRow-right">COMMERCIAL</span>
+      </a>
+      <a href="residential.html">
+        <span class="thirdRow-left">RESIDENTIAL</span>
+      </a>
+      <a href="careers.html">
+        <span class="bottom-left">CAREERS</span>
+      </a>
+      <a id="toggle-mail-inside-menu">
+        <span class="bottom-right">CONTACT</span>
+      </a>
+    </nav>
+  </div>
+
+  <div class="overlay-left" id="overlay-left">
+    <nav class="overlay-menu">
+
+      <div class="left-content">
+        <a href="default.htm">
+          <img class="img-responsive" src="images/logo.png">
+        </a>
+        <img id="toggle-mail" class="img-responsive" src="images/envelope.png">
+        <div id="main-contact">
+          <h3>We Bring Nature Home</h3>
+          <p>Located in Bixby Knolls, CA
+            <br>(562) 424-8273</p>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+
+  <!-- Email Form -->
+
+  <div class="overlay-mail" id="overlay-mail">
+    <div id="contact-close">X</div>
+    <div class="contact-content">
+      <h6>Contact our environmentally-friendly, rose-smelling staff today.</h6>
+      <br>
+      <p>Call Laurence or Shelby at (562) 424-8273 or fill out the form and
+        <br>someone will contact you directly.</p>
+    </div>
+    <div class="mail-content">
+      <form action="mail.php" method="POST">
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" name="first-name" required>
+          <label class="mdl-textfield__label" for="first-name">First Name</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" name="last-name" required>
+          <label class="mdl-textfield__label" for="last-name">Last Name</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="email" name="email" required>
+          <label class="mdl-textfield__label" for="email">Email</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+          <textarea class="mdl-textfield__input" type="text" name="message" rows="5" id="message" required></textarea>
+          <label class="mdl-textfield__label" for="message">Enter message here...</label>
+        </div>
+        <br>
+        <br>
+        <button style="background: #7d9558" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          <span style="color:white">SUBMIT</span>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div id="careers">
+
+    <!-- Mobile Content -->
+
+    <div class="mobile-content">
+      <div class="mobile-header">
+        <a href="default.htm">
+          <img class="img-responsive" src="images/logo.png">
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <div class="mobile-menu">
+          <div id="mobile-toggle" class="menu-mobile nopadding">
+            <img class="img-responsive" src="images/menu-icon.png">
+          </div>
+          <a href="tel:5624248273">
+            <div class="phone-mobile menu-mobile nopadding">
+              <img class="img-responsive" src="images/phone-icon.png">
+            </div>
+          </a>
+          <a href="mailto:digdeeper@renewlandscapes.com">
+            <div class="email-mobile menu-mobile nopadding">
+              <img class="img-responsive" src="images/mail-icon.png">
+            </div>
+          </a>
+        </div>
+      </nav>
+
+      <div class="section1-mobile-contnet">
+        <h3>JOB OPPORTUNITIES</h3>
+      </div>
+      <div class="header-img-mobile"></div>
+      <div class="sub-header-text">
+        <p>Whether it’s a California native garden with blue eyed grass or a winding path with boxwood hedges—Renew combines
+          environmental science with rich landscape design that’s inspired by nature. We plan in unison with sunlight direction
+          and existing surrounds, using a variety of textures and colors creating resilient landscapes that thrive with minimal
+          care. Take the time to get to know us, your plants will be happy you did.</p>
+      </div>
+    </div>
+    <!-- END OF MOBILE CONTENT -->
+
+    <div class="header">
+
+      <div class="left-content">
+        <div id="main-logo">
+          <a href="default.htm">
+            <img class="img-responsive" src="images/logo.png">
+          </a>
+        </div>
+        <img id="toggle-mail-menu" class="img-responsive" src="images/envelope.png">
+        <div id="main-contact">
+          <h3>We Bring Nature Home</h3>
+          <p>Located in Bixby Knolls, CA
+            <br>(562) 424-8273</p>
+        </div>
+
+      </div>
+
+      <div class="right-content">
+        <div class="top">
+          <div class="typing">
+            <h3>CAREERS</h3>
+            <h6>
+              JOB OPPORTUNITIES
+            </h6>
+            <br>
+            <p>What's your passion? Check out all our open spots below. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+      <!--END OF RIGHT CONTENT -->
+    </div>
+    <!--END OF HEADER -->
+
+    <div class="section">
+      <div id="section1"></div>
+      <div class="content">
+        <h3>LANDSCAPE IRRIGATION TECHNICIAN</h3>
+        <p style="text-align: center; margin-bottom: 0;">
+          <i class="fa fa-map-marker" aria-hidden="true"></i> Newport Beach, CA
+        </p>
+        <img id="divider" class="img-responsive" src="images/divider-green.png">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis libero nihil quibusdam nemo. Nisi quam aspernatur
+          commodi iusto accusamus minus perspiciatis quas et id ipsam voluptates, aliquid laborum architecto, cupiditate
+          aliquam eaque. Atque eaque, exercitationem quis distinctio earum ipsam nobis quam temporibus, sint recusandae minus
+          fuga. Ipsam rem non vitae?</p>
+        <ul>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+          </li>
+        </ul>
+        <button style="background: #7d9558; display: flex; margin:auto; margin-top: 1em;" class="toggle-apply-inside-menu-irrigation-tech mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          <span style="color:white">APPLY</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="overlay-apply applytoggle" id="overlay-apply-irrigation-tech">
+      <div id="apply-close" class="applytoggle">X</div>
+      <div class="section">
+        <div class="content">
+          <h3>LANDSCAPE IRRIGATION TECHNICIAN</h3>
+          <p style="text-align: center; margin-bottom: 0;">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> Newport Beach, CA
+          </p>
+          <img id="divider" class="img-responsive" src="images/divider-green.png">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis libero nihil quibusdam nemo. Nisi quam aspernatur
+            commodi iusto accusamus minus perspiciatis quas et id ipsam voluptates, aliquid laborum architecto, cupiditate
+            aliquam eaque. Atque eaque, exercitationem quis distinctio earum ipsam nobis quam temporibus, sint recusandae
+            minus fuga. Ipsam rem non vitae?</p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mail-content">
+        <form action="mail.php" method="POST">
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" name="first-name" required>
+            <label class="mdl-textfield__label" for="first-name">First Name</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" name="last-name" required>
+            <label class="mdl-textfield__label" for="last-name">Last Name</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="email" name="email" required>
+            <label class="mdl-textfield__label" for="email">Email</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="tel" name="phone" pattern="-?[0-9]*(\.[0-9]+)?" id="phone" required></input>
+            <label class="mdl-textfield__label" for="phone">Phone</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--file inputFile-container">
+            <input type="file" name="file" id="file" class="inputFile" />
+            <label for="file" class="inputFile-text">
+              <i class="fa fa-paperclip fa-rotate-45" style="margin-right: 0.5em;" aria-hidden="true"></i> Attach Your Resume</label>
+          </div>
+          <br>
+          <br>
+          <button style="background: #7d9558" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            <span style="color:white">Submit</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="section">
+      <div id="section3"></div>
+      <div class="content">
+        <h3>LANDSCAPE FOREMAN</h3>
+        <p style="text-align: center; margin-bottom: 0;">
+          <i class="fa fa-map-marker" aria-hidden="true"></i> Redwood City, CA
+        </p>
+        <img id="divider" class="img-responsive" src="images/divider-green.png">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis libero nihil quibusdam nemo. Nisi quam aspernatur
+          commodi iusto accusamus minus perspiciatis quas et id ipsam voluptates, aliquid laborum architecto, cupiditate
+          aliquam eaque. Atque eaque, exercitationem quis distinctio earum ipsam nobis quam temporibus, sint recusandae minus
+          fuga. Ipsam rem non vitae?</p>
+        <ul>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+          </li>
+        </ul>
+        <button style="background: #7d9558; display: flex; margin:auto; margin-top: 1em;" class="toggle-apply-inside-menu-foreman mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          <span style="color:white">APPLY</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="overlay-apply applytoggle" id="overlay-apply-foreman">
+      <div id="apply-close" class="applytoggle">X</div>
+      <div class="section">
+        <div class="content">
+          <h3>LANDSCAPE FOREMAN</h3>
+          <p style="text-align: center; margin-bottom: 0;">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> Newport Beach, CA
+          </p>
+          <img id="divider" class="img-responsive" src="images/divider-green.png">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis libero nihil quibusdam nemo. Nisi quam aspernatur
+            commodi iusto accusamus minus perspiciatis quas et id ipsam voluptates, aliquid laborum architecto, cupiditate
+            aliquam eaque. Atque eaque, exercitationem quis distinctio earum ipsam nobis quam temporibus, sint recusandae
+            minus fuga. Ipsam rem non vitae?</p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, illo.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mail-content">
+        <form action="mail.php" method="POST">
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" name="first-name" required>
+            <label class="mdl-textfield__label" for="first-name">First Name</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" name="last-name" required>
+            <label class="mdl-textfield__label" for="last-name">Last Name</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="email" name="email" required>
+            <label class="mdl-textfield__label" for="email">Email</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="tel" name="phone" pattern="-?[0-9]*(\.[0-9]+)?" id="phone" required></input>
+            <label class="mdl-textfield__label" for="phone">Phone</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--file inputFile-container">
+            <input type="file" name="file" id="file" class="inputFile" />
+            <label for="file" class="inputFile-text">
+              <i class="fa fa-paperclip fa-rotate-45" style="margin-right: 0.5em;" aria-hidden="true"></i> Attach Your Resume</label>
+          </div>
+          <br>
+          <br>
+          <button style="background: #7d9558" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            <span style="color:white">Submit</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <img class="mobile-content" src="images/about-guy-full.jpg" alt="Laurence Watt">
+    <div id="services">
+      <div class="not-mobile" id="service-buffer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam fuga sit, libero, accusamus nemo hic pariatur eius,
+          laudantium quam quos repellat ullam aut id eos repellendus recusandae nostrum quibusdam unde reprehenderit laboriosam
+          blanditiis nesciunt culpa nulla distinctio. Voluptate consequuntur consectetur id dolor at. Accusantium, blanditiis
+          assumenda voluptatibus expedita quaerat</p>
+      </div>
+    </div>
+
+    <div class="not-mobile careers-banner"></div>
+
+    <!-- footer -->
+    <footer class="footer-section">
+      <div id="logo">
+        <a href="default.htm">
+          <img class="img-responsive" src="images/logo.png">
+        </a>
+        <p>Located in Bixby Knolls, CA.
+          <br>P: (562) 424-8273. E:
+          <a href="mailto:digdeeper@renewlandscapes.com">DigDeeper@renewlandscapes.com</a>
+          <br>&copy; Renew Landscapes 2017</p>
+      </div>
+      <div id="footer-icons">
+        <a href="difference.html">
+          <img class="img-responsive" src="images/footer-icons.jpg">
+        </a>
+      </div>
+      <div id="social-icons--container">
+        <a class="social-icons__link" href="https://www.houzz.com/pro/renewlandscapesmanagement/renew-landscape-management">
+          <div class="social-icons social-icons--houzz" style=" color:black;"></div>
+        </a>
+        <a class="social-icons__link" href="https://www.facebook.com/renewlandscapes">
+          <div class="social-icons social-icons--facebook" style="color:black;"></div>
+        </a>
+        <a class="social-icons__link" href="https://www.instagram.com/renewlandscapes/">
+          <div class="social-icons social-icons--insta" style="color:black;"></div>
+        </a>
+      </div>
+    </footer>
+
+    <!-- MOBILE FOOTER -->
+
+    <div class="mobile-footer mobile-content ">
+      <div>
+        <a href="default.htm ">
+          <img class="img-responsive " src="images/mobile-footer-logo.jpg ">
+        </a>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.houzz.com/pro/renewlandscapesmanagement/renew-landscape-management">
+          <img src="css/images/icon-houzz.png">
+        </a>
+        <a href="https://www.facebook.com/Renew-Landscapes-1732711080274856/">
+          <img src="images/facebook.png">
+        </a>
+        <a href="http://www.instagram.com/renewlandscapes">
+          <img src="images/instagram.jpg">
+        </a>
+      </div>
+      <p>© COPYRIGHT 2017
+        <br>RENEW LANDSCAPES.</p>
+    </div>
+
+    <script src="js/script.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ReNew</title>
+  <link rel="shortcut icon" href="images/_logo_Renew_favicon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google fonts -->
+
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:100' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Material Design -->
+  <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.green-light_green.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+
+  <!-- GreenSock -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+
+  <script src="https://use.typekit.net/zte2fuo.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <script src="js/magnific-popup.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <!-- Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-79167322-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head>
+
+<body>
+  <!-- menu -->
+  <div class="button_container" id="toggle">
+    <p>MENU</p>
+  </div>
+
+  <div class="overlay-right" id="overlay-right">
+    <nav class="overlay-menu">
+      <a href="about.html">
+        <span class="top-left">ABOUT</span>
+      </a>
+      <a href="difference.html">
+        <span class="top-right">DIFFERENCE</span>
+      </a>
+      <a href="services.html">
+        <span class="secondRow-right">SERVICES</span>
+      </a>
+      <a href="design.html">
+        <span class="secondRow-left">DESIGN</span>
+      </a>
+      <a href="commercial.html">
+        <span class="thirdRow-right">COMMERCIAL</span>
+      </a>
+      <a href="residential.html">
+        <span class="thirdRow-left">RESIDENTIAL</span>
+      </a>
+      <a href="careers.html">
+        <span class="bottom-left">CAREERS</span>
+      </a>
+      <a id="toggle-mail-inside-menu">
+        <span class="bottom-right">CONTACT</span>
+      </a>
+    </nav>
+  </div>
+
+  <div class="overlay-left" id="overlay-left">
+    <nav class="overlay-menu">
+
+      <div class="left-content">
+        <a href="default.htm">
+          <img class="img-responsive" src="images/logo.png">
+        </a>
+        <img id="toggle-mail" class="img-responsive" src="images/envelope.png">
+        <div id="main-contact">
+          <h3>We Bring
+            <br class="toggle-responsive" style="display: none;"> Nature Home</h3>
+          <p>Located in Bixby Knolls, CA
+            <br>(562) 424-8273</p>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+
+  <!-- Email Form -->
+
+  <div class="overlay-mail" id="overlay-mail">
+    <div id="contact-close">X</div>
+    <div class="contact-content">
+      <h6>Contact our environmentally-friendly, rose-smelling staff today.</h6>
+      <br>
+      <p>Call Laurence or Shelby at (562) 424-8273 or fill out the form and
+        <br>someone will contact you directly.</p>
+    </div>
+    <div class="mail-content">
+      <form action="mail.php" method="POST">
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" name="first-name" required>
+          <label class="mdl-textfield__label" for="first-name">First Name</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" name="last-name" required>
+          <label class="mdl-textfield__label" for="last-name">Last Name</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="email" name="email" required>
+          <label class="mdl-textfield__label" for="email">Email</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+          <textarea class="mdl-textfield__input" type="text" name="message" rows="5" id="message" required></textarea>
+          <label class="mdl-textfield__label" for="message">Enter message here...</label>
+        </div>
+        <br>
+        <br>
+        <button style="background: #7d9558" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          <span style="color:white">Send</span>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div id="about">
+
+    <!-- Mobile Content -->
+
+    <div class="mobile-content">
+      <div class="mobile-header">
+        <a href="default.htm">
+          <img class="img-responsive" src="images/logo.png">
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <div class="mobile-menu">
+          <div id="mobile-toggle" class="menu-mobile nopadding">
+            <img class="img-responsive" src="images/menu-icon.png">
+          </div>
+          <a href="tel:5624248273">
+            <div class="phone-mobile menu-mobile nopadding">
+              <img class="img-responsive" src="images/phone-icon.png">
+            </div>
+          </a>
+          <a href="mailto:digdeeper@renewlandscapes.com">
+            <div class="email-mobile menu-mobile nopadding">
+              <img class="img-responsive" src="images/mail-icon.png">
+            </div>
+          </a>
+        </div>
+      </nav>
+
+      <div class="section1-mobile-contnet">
+        <h3>WHERE GREEN
+          <br>THUMB GOES
+          <br>HAND IN HAND
+          <br>WITH GREAT CARE.</h3>
+      </div>
+      <div class="header-img-mobile"></div>
+      <div class="sub-header-text">
+        <p>Whether it’s a California native garden with blue eyed grass or a winding path with boxwood hedges—Renew combines
+          environmental science with rich landscape design that’s inspired by nature. We plan in unison with sunlight direction
+          and existing surrounds, using a variety of textures and colors creating resilient landscapes that thrive with minimal
+          care. Take the time to get to know us, your plants will be happy you did.</p>
+      </div>
+    </div>
+    <!-- END OF MOBILE CONTENT -->
+
+    <div class="header">
+
+      <div class="left-content">
+        <div id="main-logo">
+          <a href="default.htm">
+            <img class="img-responsive" src="images/logo.png">
+          </a>
+        </div>
+        <img id="toggle-mail-menu" class="img-responsive" src="images/envelope.png">
+        <div id="main-contact">
+          <h3>We Bring
+            <br class="toggle-responsive" style="display: none;"> Nature Home</h3>
+          <p>Located in Bixby Knolls, CA
+            <br>(562) 424-8273</p>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <div class="top">
+          <div class="typing">
+            <h3>ABOUT</h3>
+            <h6>
+              WHERE GREEN THUMB GOES HAND IN HAND WITH GREAT CARE.
+            </h6>
+            <br>
+            <p>Whether it’s a California native garden with blue-eyed grass or a winding path with boxwood hedges, RENEW combines
+              environmental science with rich landscape design that’s inspired by nature. &nbsp;We plan in unison with sunlight
+              direction and existing surroundings, using a variety of textures and colors to create resilient landscapes
+              that thrive with minimal care. &nbsp;Take the time to get to know us, your plants will be happy you did. </p>
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+      <!--END OF RIGHT CONTENT -->
+    </div>
+    <!--END OF HEADER -->
+
+    <div class="section">
+      <div id="section1"></div>
+      <div class="content">
+        <h3>NATURAL PHILOSOPHY.
+          <br>HOLISTIC APPROACH. ORGANIC STANDARDS.</h3>
+        <p>When you combine great garden design, integrated pest management, and proper horticultural techniques free of harmful
+          chemicals, you’ll grow a healthy, long-lasting landscape. &nbsp;You can spot the difference right away, because
+          every time we care for garden, we leave behind a door hanger describing what services were performed.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div id="section2"></div>
+      <div class="content">
+        <h3>“WE BRING NATURE HOME.”</h3>
+        <h4>
+          <em>Laurence Watt, Groundskeeper</em>
+        </h4>
+        <br>
+        <img id="divider" class="img-responsive" src="images/divider-green.png">
+        <p>I’ve been enthusiastic about ornamental horticulture since the late sixties. </p>
+        <p>As a small boy, my favorite memories were working in my grandfather’s garden in Palos Verdes. Not your typical house
+          garden, this landscape was as diverse as it was magical. Set into the side of a hill, it was etched with stairways
+          and terraces, and populated with all manner of interesting bugs, amphibians and reptiles. This playground served
+          as a core formative experience for the way I look at landscape now. Several microclimates were available - enabling
+          what Grandpa referred to as pocket gardens - to be placed throughout the property, and he used inexpensive recycled
+          materials, such as broken concrete pavement, old rail timbers and gravel to make paths to connect them. Regular
+          watering was reserved for flower beds and the prized dichondra courtyard but the rest of the area was left to fend
+          for itself with only occasional hand-watering, pruning and weeding needed. I still hear him reminding me to pull
+          weeds out by hand, making sure to remove their roots, rather than giving them ‘haircuts’ with a hoe. </p>
+        <p>When the time came for college, landscape architecture seemed an obvious career choice. I also briefly explored a
+          fine arts education but always felt ‘cooped up’ being indoors for so many hours. The landscape program was the
+          right fit. A little bit of know-how combined with some artistry and moderate physical labor achieved some pretty
+          incredible results. Unfortunately, a year and a half into the program, the “Tech Boom” occurred and like many other
+          young men with family plans, earning potential from the tech industry proved too hard to resist, so I changed majors.
+        </p>
+        <p>Over the next couple decades, computer work provided a good living but was never very satisfying. I had always found
+          more joy working with my landscape and helping others with theirs. My home library evolved in a predominantly horticultural
+          direction and most of my vacation plans focus on which garden visits can be worked into the itinerary. At some
+          point, it seemed a good idea to turn that energy into a vocation.
+          <br>
+        </p>
+      </div>
+    </div>
+
+    <img class="mobile-content" src="images/about-guy-full.jpg" alt="Laurence Watt">
+
+    <div class="section">
+      <div id="section3"></div>
+      <div class="content">
+        <h3>“A GARDEN IS AN INVESTMENT IN HEALTH.”</h3>
+        <h4>
+          <em>Shelby Batalla, Landscape Designer</em>
+        </h4>
+        <br>
+        <img id="divider" class="img-responsive" src="images/divider-green.png">
+        <p>Over the last decade, Shelby has created a portfolio of work that combines sophisticated landscape architecture with
+          sustainable ecological systems. Her innovative designs bring unity and cohesion to places where people live, work,
+          and play. From restoration ecology to environmental planning, Shelby is working diligently to construct models
+          of biodiversity with best environmental landscape practices. For her, it’s all about working with nature, and not
+          against it. Shelby is well versed in the field of architecture and has a deep understanding of its history, landscape
+          design, and fine art. She has a BA from Trinity College, a masters from Rhode Island School of Design, and was
+          the recipient of the American Society of Landscape Architecture Graduate Merit Award for her thesis. Recently,
+          she was awarded a Placemaking Grant from Downtown Long Beach Associates and a Micro Grant from the Arts Council
+          for her ‘Precious Cargo’ solar-powered urban furniture and public art installation.</p>
+      </div>
+    </div>
+    <img class="mobile-content" src="images/about-girl.jpg" alt="Shelby Batalla" height="auto" width="320">
+  </div>
+
+  <div class="not-mobile" id="bee"></div>
+
+  <!-- footer -->
+  <footer class="footer-section">
+    <div id="logo">
+      <a href="default.htm">
+        <img class="img-responsive" src="images/logo.png">
+      </a>
+      <p>Located in Bixby Knolls, CA.
+        <br>P: (562) 424-8273. E:
+        <a href="mailto:digdeeper@renewlandscapes.com">DigDeeper@renewlandscapes.com</a>
+        <br>&copy; Renew Landscapes 2017</p>
+    </div>
+    <div id="footer-icons">
+      <a href="difference.html">
+        <img class="img-responsive" src="images/footer-icons.jpg">
+      </a>
+    </div>
+    <div id="social-icons--container">
+      <a class="social-icons__link" href="https://www.houzz.com/pro/renewlandscapesmanagement/renew-landscape-management">
+        <div class="social-icons social-icons--houzz" style=" color:black;"></div>
+      </a>
+      <a class="social-icons__link" href="https://www.facebook.com/renewlandscapes">
+        <div class="social-icons social-icons--facebook" style="color:black;"></div>
+      </a>
+      <a class="social-icons__link" href="https://www.instagram.com/renewlandscapes/">
+        <div class="social-icons social-icons--insta" style="color:black;"></div>
+      </a>
+    </div>
+  </footer>
+
+  <!-- MOBILE FOOTER -->
+
+  <div class="mobile-footer mobile-content">
+    <div>
+      <a href="default.htm">
+        <img class="img-responsive" src="images/mobile-footer-logo.jpg">
+      </a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.houzz.com/pro/renewlandscapesmanagement/renew-landscape-management">
+        <img src="css/images/icon-houzz.png">
+      </a>
+      <a href="https://www.facebook.com/Renew-Landscapes-1732711080274856/">
+        <img src="images/facebook.png">
+      </a>
+      <a href="http://www.instagram.com/renewlandscapes">
+        <img src="images/instagram.jpg">
+      </a>
+    </div>
+    <p>© COPYRIGHT 2017
+      <br>RENEW LANDSCAPES.</p>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

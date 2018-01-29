@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ReNew</title>
+  <link rel="shortcut icon" href="images/_logo_Renew_favicon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:100' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Material Design -->
+  <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.green-light_green.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+
+  <!-- GreenSock -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+
+  <script src="https://use.typekit.net/zte2fuo.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <script src="js/magnific-popup.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <!-- Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-79167322-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head>
+
+<body>
+  <!-- menu -->
+  <div class="button_container" id="toggle">
+    <p>Menu</p>
+  </div>
+
+  <div class="overlay-right" id="overlay-right">
+    <nav class="overlay-menu">
+      <a href="about.html">
+        <span class="top-left">ABOUT</span>
+      </a>
+      <a href="difference.html">
+        <span class="top-right">DIFFERENCE</span>
+      </a>
+      <a href="services.html">
+        <span class="secondRow-right">SERVICES</span>
+      </a>
+      <a href="design.html">
+        <span class="secondRow-left">DESIGN</span>
+      </a>
+      <a href="commercial.html">
+        <span class="thirdRow-right">COMMERCIAL</span>
+      </a>
+      <a href="residential.html">
+        <span class="thirdRow-left">RESIDENTIAL</span>
+      </a>
+      <a href="careers.html">
+        <span class="bottom-left">CAREERS</span>
+      </a>
+      <a id="toggle-mail-inside-menu">
+        <span class="bottom-right">CONTACT</span>
+      </a>
+    </nav>
+  </div>
+
+  <div class="overlay-left" id="overlay-left">
+    <nav class="overlay-menu">
+
+      <div class="left-content">
+        <a href="default.htm">
+          <img class="img-responsive" src="images/logo.png">
+        </a>
+        <img id="toggle-mail" class="img-responsive" src="images/envelope.png">
+        <div id="main-contact">
+          <h3>We Bring
+            <br class="toggle-responsive" style="display: none;"> Nature Home</h3>
+          <p>Located in Bixby Knolls, CA
+            <br>(562) 424-8273</p>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+
+  <!-- Email Form -->
+
+  <div class="overlay-mail" id="overlay-mail">
+    <div id="contact-close">X</div>
+    <div class="contact-content">
+      <h6>Contact our environmentally-friendly, rose-smelling staff today.</h6>
+      <br>
+      <p>Call Laurence or Shelby at (562) 424-8273 or fill out the form and
+        <br>someone will contact you directly.</p>
+    </div>
+    <div class="mail-content">
+      <form action="mail.php" method="POST">
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" name="first-name" required>
+          <label class="mdl-textfield__label" for="first-name">First Name</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" name="last-name" required>
+          <label class="mdl-textfield__label" for="last-name">Last Name</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="email" name="email" required>
+          <label class="mdl-textfield__label" for="email">Email</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+          <textarea class="mdl-textfield__input" type="text" name="message" rows="5" id="message" required></textarea>
+          <label class="mdl-textfield__label" for="message">Enter message here...</label>
+        </div>
+        <br>
+        <br>
+        <button style="background: #7d9558" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          <span style="color:white">Send</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- services content -->
+  <div id="difference">
+
+    <!-- Mobile Content -->
+
+    <div class="mobile-content">
+      <div class="mobile-header">
+        <a href="default.htm">
+          <img class="img-responsive" src="images/logo.png">
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <div class="mobile-menu">
+          <div id="mobile-toggle" class="menu-mobile nopadding">
+            <img class="img-responsive" src="images/menu-icon.png">
+          </div>
+          <a href="tel:5624248273">
+            <div class="phone-mobile menu-mobile nopadding">
+              <img class="img-responsive" src="images/phone-icon.png">
+            </div>
+          </a>
+          <a href="mailto:digdeeper@renewlandscapes.com">
+            <div class="email-mobile menu-mobile nopadding">
+              <img class="img-responsive" src="images/mail-icon.png">
+            </div>
+          </a>
+        </div>
+      </nav>
+
+      <div class="section1-mobile-contnet">
+        <h3>WE UNDERSTAND THE IMPORTANCE OF WHAT YOU’VE PLACED IN OUR HANDS.</h3>
+      </div>
+      <div class="header-img-mobile">
+      </div>
+      <div class="sub-header-text">
+        <p>Our ecological vision continues to grow as we change conventional landscaping into how we view the relationship between
+          nature, the environment and ourselves. It starts by putting an end to using power tools or plug-in equipment. These
+          methods might be the norm for most gardeners, but not for RENEW.</p>
+      </div>
+    </div>
+    <!-- END OF MOBILE CONTENT -->
+
+    <div class="header">
+
+      <div class="left-content">
+        <div id="main-logo">
+          <a href="default.htm">
+            <img class="img-responsive" src="images/logo.png">
+          </a>
+        </div>
+        <img id="toggle-mail-menu" class="img-responsive" src="images/envelope.png">
+        <div id="main-contact">
+          <h3>We Bring
+            <br class="toggle-responsive" style="display: none;"> Nature Home</h3>
+          <p>Located in Bixby Knolls, CA
+            <br>(562) 424-8273</p>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <div class="top">
+          <div class="typing">
+            <h3>THE DIFFERENCE</h3>
+            <h6>WE UNDERSTAND THE IMPORTANCE OF WHAT YOU’VE PLACED IN OUR HANDS.</h6>
+            <br>
+            <p>Our ecological vision continues to grow as we change conventional landscaping into how we view the relationship
+              between nature, the environment and ourselves. &nbsp;It starts by putting an end to using power tools or plug-in
+              equipment. &nbsp;These methods might be the norm for most gardeners, but not for RENEW.</p>
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+    <!--END OF HEADER -->
+
+    <div id="difference-content">
+      <div class="left desktop-content">
+        <img class="not-mobile" src="images/difference-right-1.jpg">
+
+        <div id="text-box">
+          <p>Our ecological vision continues to grow as we change conventional landscaping into how we view the relationship
+            between nature, the environment and ourselves. It starts by putting an end to using power tools or plug-in equipment.
+            These methods might be the norm for most gardeners, but not for RENEW.</p>
+        </div>
+
+        <img src="images/difference-right-2.jpg">
+
+        <div id="text-box">
+          <p>Compost tea is a liquid produced by leaching all of the good things from compost. This includes soluble nutrients,
+            bacteria, fungi, protozoa, and nematodes. And why would you want this tea on your garden? The same way our bodies
+            ingest certain compounds to lessen the incidents of disease, compost tea does the same thing.</p>
+        </div>
+
+        <img src="images/difference-right-3.jpg">
+        <div class="desktop-content" id="text-box">
+          <p>Our goal is not only to enrich our clients’ enjoyment of their gardens, but to enrich the environment surrounding
+            it.
+          </p>
+        </div>
+      </div>
+      <!-- End of left content -->
+
+      <div class="right">
+
+        <img id="icon" class="img-responsive" src="images/blower.png">
+
+        <h3>NO LEAF BLOWERS</h3>
+        <img id="divider" class="img-responsive" src="images/black-divider-shape.png">
+        <p>You won’t find any loud, wind-making leaf blowers when we take care of your yard. &nbsp;Not only do they give off
+          emissions, they also blow the buds and leaves right off your blooming flowers. &nbsp;If there’s a pile of leaves
+          that needs to be cleaned-up, we’ll use a rake.</p>
+        <img id="icon" class="img-responsive" src="images/mower.png">
+
+        <h3>NO LAWN MOWERS</h3>
+
+        <img id="divider" class="img-responsive" src="images/black-divider-shape.png">
+        <p>With many residences looking for more drought-tolerant gardens, large grass lawns are becoming a thing of the past.
+          &nbsp;They require a lot of water, especially during summer months. &nbsp;So if you have a lawn, we’ll show you
+          a water-wise alternative and recommend removing your grass.</p>
+        <img id="icon" class="img-responsive" src="images/weed-trimmer.png">
+
+        <h3>NO WEED-WHACKERS</h3>
+
+        <img id="divider" class="img-responsive" src="images/black-divider-shape.png">
+        <p>We’re not a fan of weeds, nor weed-whackers for that matter. &nbsp;So if we spot weeds in your yard, we will pull
+          them out one at a time, hand by hand. &nbsp;Weed-whackers tend to chop anything in their path, which could destroy
+          precious flowers and blooming plants that aren’t meant to be cut down.</p>
+        <img id="icon" class="img-responsive" src="images/chemicals.png">
+
+        <h3>NO CHEMICALS</h3>
+
+        <img id="divider" class="img-responsive" src="images/black-divider-shape.png">
+        <p>There are many chemicals found in many landscape maintenance routines, from algaecides to remove bacteria from ponds,
+          to fungicides used to treat affected plants and flowers. &nbsp;However, you won’t find any of those in RENEW’s
+          natural nutrients. &nbsp;All of our fertilizers are 100% organic and holistically created. </p>
+        <img id="icon" class="img-responsive" src="images/water-spill.png">
+
+        <h3>NO WATER WASTE</h3>
+
+        <img id="divider" class="img-responsive" src="images/black-divider-shape.png">
+        <p>Designing with drought tolerant, hardy plants is the core of RENEW’s philosophy. &nbsp;We group plants thoughtfully
+          when selecting shrubs, ground covers, and perennials so they naturally grow together and use about the same amount
+          of water. &nbsp;Also, by routinely cultivating your soil, we’re able to improve its ability to resist evaporation
+          and retain moisture.</p>
+      </div>
+      <!-- End of RIGHT -->
+    </div>
+    <!-- End of Difference Content-->
+  </div>
+  <!-- End of Difference -->
+
+  <div id="difference-footer-img"></div>
+
+  <!-- footer -->
+  <footer class="footer-section">
+    <div id="logo">
+      <a href="default.htm">
+        <img class="img-responsive" src="images/logo.png">
+      </a>
+      <p>Located in Bixby Knolls, CA.
+        <br>P: (562) 424-8273. E:
+        <a href="mailto:digdeeper@renewlandscapes.com">DigDeeper@renewlandscapes.com</a>
+        <br>&copy; Renew Landscapes 2017</p>
+
+    </div>
+    <div id="footer-icons">
+      <a href="difference.html">
+        <img class="img-responsive" src="images/footer-icons.jpg">
+      </a>
+    </div>
+    <div id="social-icons--container">
+      <a class="social-icons__link" href="https://www.houzz.com/pro/renewlandscapesmanagement/renew-landscape-management">
+        <div class="social-icons social-icons--houzz" style=" color:black;"></div>
+      </a>
+      <a class="social-icons__link" href="https://www.facebook.com/renewlandscapes">
+        <div class="social-icons social-icons--facebook" style="color:black;"></div>
+      </a>
+      <a class="social-icons__link" href="https://www.instagram.com/renewlandscapes/">
+        <div class="social-icons social-icons--insta" style="color:black;"></div>
+      </a>
+    </div>
+  </footer>
+
+  <!-- MOBILE FOOTER -->
+
+  <div class="mobile-footer mobile-content">
+    <div>
+      <a href="default.htm">
+        <img class="img-responsive" src="images/mobile-footer-logo.jpg">
+      </a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.houzz.com/pro/renewlandscapesmanagement/renew-landscape-management">
+        <img src="css/images/icon-houzz.png">
+      </a>
+      <a href="https://www.facebook.com/Renew-Landscapes-1732711080274856/">
+        <img src="images/facebook.png">
+      </a>
+      <a href="http://www.instagram.com/renewlandscapes">
+        <img src="images/instagram.jpg">
+      </a>
+    </div>
+    <p>© COPYRIGHT 2017
+      <br>RENEW LANDSCAPES.</p>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

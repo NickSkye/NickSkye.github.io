@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ReNew</title>
+  <link rel="shortcut icon" href="images/_logo_Renew_favicon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:100' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Material Design -->
+  <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.green-light_green.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+
+  <!-- GreenSock -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+
+  <script src="https://use.typekit.net/zte2fuo.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <script src="js/magnific-popup.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <!-- Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-79167322-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head>
+
+<body>
+  <!-- menu -->
+  <div class="button_container" id="toggle">
+    <p>Menu</p>
+  </div>
+
+  <div class="overlay-right" id="overlay-right">
+    <nav class="overlay-menu">
+      <a href="about.html">
+        <span class="top-left">ABOUT</span>
+      </a>
+      <a href="difference.html">
+        <span class="top-right">DIFFERENCE</span>
+      </a>
+      <a href="services.html">
+        <span class="secondRow-right">SERVICES</span>
+      </a>
+      <a href="design.html">
+        <span class="secondRow-left">DESIGN</span>
+      </a>
+      <a href="commercial.html">
+        <span class="thirdRow-right">COMMERCIAL</span>
+      </a>
+      <a href="residential.html">
+        <span class="thirdRow-left">RESIDENTIAL</span>
+      </a>
+      <a href="careers.html">
+        <span class="bottom-left">CAREERS</span>
+      </a>
+      <a id="toggle-mail-inside-menu">
+        <span class="bottom-right">CONTACT</span>
+      </a>
+    </nav>
+  </div>
+
+  <div class="overlay-left" id="overlay-left">
+    <nav class="overlay-menu">
+
+      <div class="left-content">
+        <a href="default.htm">
+          <img class="img-responsive" src="images/logo.png">
+        </a>
+        <img id="toggle-mail" class="img-responsive" src="images/envelope.png">
+        <div id="main-contact">
+          <h3>We Bring
+            <br class="toggle-responsive" style="display: none;"> Nature Home</h3>
+          <p>Located in Bixby Knolls, CA
+            <br>(562) 424-8273</p>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+
+  <!-- Email Form -->
+
+  <div class="overlay-mail" id="overlay-mail">
+    <div id="contact-close">X</div>
+    <div class="contact-content">
+      <h6>Contact our environmentally-friendly, rose-smelling staff today.</h6>
+      <br>
+      <p>Call Laurence or Shelby at (562) 424-8273 or fill out the form and
+        <br>someone will contact you directly.</p>
+    </div>
+    <div class="mail-content">
+      <form action="mail.php" method="POST">
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" name="first-name" required>
+          <label class="mdl-textfield__label" for="first-name">First Name</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" name="last-name" required>
+          <label class="mdl-textfield__label" for="last-name">Last Name</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="email" name="email" required>
+          <label class="mdl-textfield__label" for="email">Email</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+          <textarea class="mdl-textfield__input" type="text" name="message" rows="5" id="message" required></textarea>
+          <label class="mdl-textfield__label" for="message">Enter message here...</label>
+        </div>
+        <br>
+        <br>
+        <button style="background: #7d9558" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          <span style="color:white">Send</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div id="services">
+
+    <!-- Mobile Content -->
+
+    <div class="mobile-content">
+      <div class="mobile-header">
+        <a href="default.htm">
+          <img class="img-responsive" src="images/logo.png" height="auto" width="160">
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <div class="mobile-menu">
+          <div id="mobile-toggle" class="menu-mobile nopadding">
+            <img class="img-responsive" src="images/menu-icon.png">
+          </div>
+          <a href="tel:5624248273">
+            <div class="phone-mobile menu-mobile nopadding">
+              <img class="img-responsive" src="images/phone-icon.png">
+            </div>
+          </a>
+          <a href="mailto:digdeeper@renewlandscapes.com">
+            <div class="email-mobile menu-mobile nopadding">
+              <img class="img-responsive" src="images/mail-icon.png">
+            </div>
+          </a>
+        </div>
+      </nav>
+
+      <div class="section1-mobile-contnet">
+        <h3>THREE STEPS TO A WORLD OF CHANGE OUR DISTINCT SERVICES.</h3>
+      </div>
+      <div class="header-img-mobile">
+      </div>
+      <div class="sub-header-text">
+        <p>To transform your garden into an ever-changing exhibition of color and constant delight, RENEW has a three step approach
+          to our distinct landscape services. Give us thirty minutes of your time, and we’ll show you we can improve your
+          surroundings.
+        </p>
+      </div>
+    </div>
+    <!-- END OF MOBILE CONTENT -->
+
+    <div class="header">
+
+      <div class="left-content">
+        <div id="main-logo">
+          <a href="default.htm">
+            <img class="img-responsive" src="images/logo.png">
+          </a>
+        </div>
+        <img id="toggle-mail-menu" class="img-responsive" src="images/envelope.png">
+        <div id="main-contact">
+          <h3>We Bring
+            <br class="toggle-responsive" style="display: none;"> Nature Home</h3>
+          <p>Located in Bixby Knolls, CA
+            <br>(562) 424-8273</p>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <div class="top">
+          <div class="typing">
+            <h3>SERVICES</h3>
+            <h6>
+              THREE STEPS TO A WORLD OF CHANGE OUR DISTINCT SERVICES.
+            </h6>
+            <br>
+            <p>To transform your garden into an ever-changing exhibition of color and constant delight, RENEW has a three-step
+              approach to our distinct landscape services. &nbsp;Give us thirty minutes of your time, and we’ll show you
+              we can improve your surroundings.</p>
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+    <!--END OF HEADER -->
+
+    <div class="not-mobile" id="service-buffer">
+      <p>To transform your garden into an ever-changing exhibition of color and constant delight, RENEW has a three step approach
+        to our distinct landscape services. &nbsp;Give us thirty minutes of your time, and we’ll show you we can improve
+        your surroundings.</p>
+    </div>
+    <div id="service-content">
+      <div id="service-left">
+        <img class="img-responsive" id="icon1" src="images/icon1.png">
+        </a>
+        <br>
+        <h4>RESEARCH
+          <br>Landscape analysis and consultation. </h4>
+        <img id="divider" class="img-responsive" src="images/black-divider-shape.png">
+        <br>
+        <p>Let us take a look around. We’ll get to know your yard, evaluate your challenges, and then our expert horticulturalists
+          will provide you with helpful information and suggestions to improve the health of your landscape.</p>
+        <ul>
+          <li>Initial meeting</li>
+          <li>Plant health analysis</li>
+          <li>Soil analysis</li>
+          <li>Irrigation inspection</li>
+          <li>Drainage inspection</li>
+          <li>Report &amp; suggestions</li>
+        </ul>
+      </div>
+
+      <div id="service-middle">
+        <img class="img-responsive" id="icon2" src="images/icon2.png">
+        </a>
+        <br>
+        <h4>RESTORE
+          <br>Complete landscape design and creation.</h4>
+        <img id="divider" class="img-responsive" src="images/black-divider-shape.png">
+        <br>
+        <p>Our designers take an innovative, ecologically-minded approach to restoring landscapes that have suffered from poor
+          gardening. We design to reflect your unique lifestyle with vibrant, water-wise landscapes that’ll revitalize you
+          and are also environmentally sustainable.</p>
+        <ul>
+          <li>Repair leaking valves</li>
+          <li>Replace line breaks and leaks</li>
+          <li>Check for broken sprinkler heads</li>
+          <li>Adjust automatic controllers</li>
+          <li>Annuals replacement when needed</li>
+          <li>Remove stumps</li>
+        </ul>
+      </div>
+
+      <div id="service-right">
+        <img class="img-responsive" id="icon3" src="images/icon3.png">
+        </a>
+        <br>
+        <h4>REGENERATE
+          <br>Organic maintenance and green recycling.</h4>
+        <img id="divider" class="img-responsive" src="images/black-divider-shape.png">
+        <br>
+        <p>Healthy soil supports healthy plants—it’s the natural way to promote a beautiful, sustainable garden. Our customized,
+          chemical-free organic maintenance and green recycling program will transform your landscape into a year-round lush
+          oasis.
+        </p>
+        <ul>
+          <li>Natural pruning</li>
+          <li>Weed control &amp; deadheading</li>
+          <li>Companion planting</li>
+          <li>Mulching &amp; aeration</li>
+          <li>Pruning &amp; fertilization </li>
+          <li>Integrated pest management</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <!-- End of SERVICES -->
+
+  <div id="footer-img"></div>
+
+  <!-- footer -->
+  <footer class="footer-section">
+    <div id="logo">
+      <a href="default.htm">
+        <img class="img-responsive" src="images/logo.png">
+      </a>
+      <p>Located in Bixby Knolls, CA.
+        <br>P: (562) 424-8273. E:
+        <a href="mailto:digdeeper@renewlandscapes.com">DigDeeper@renewlandscapes.com</a>
+        <br>&copy; Renew Landscapes 2017</p>
+
+    </div>
+    <div id="footer-icons">
+      <a href="difference.html">
+        <img class="img-responsive" src="images/footer-icons.jpg">
+      </a>
+    </div>
+    <div id="social-icons--container">
+      <a class="social-icons__link" href="https://www.houzz.com/pro/renewlandscapesmanagement/renew-landscape-management">
+        <div class="social-icons social-icons--houzz" style=" color:black;"></div>
+      </a>
+      <a class="social-icons__link" href="https://www.facebook.com/renewlandscapes">
+        <div class="social-icons social-icons--facebook" style="color:black;"></div>
+      </a>
+      <a class="social-icons__link" href="https://www.instagram.com/renewlandscapes/">
+        <div class="social-icons social-icons--insta" style="color:black;"></div>
+      </a>
+    </div>
+  </footer>
+
+  <!-- MOBILE FOOTER -->
+
+  <div class="mobile-footer mobile-content">
+    <div>
+      <a href="default.htm">
+        <img class="img-responsive" src="images/mobile-footer-logo.jpg">
+      </a>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.houzz.com/pro/renewlandscapesmanagement/renew-landscape-management">
+        <img src="css/images/icon-houzz.png">
+      </a>
+      <a href="https://www.facebook.com/Renew-Landscapes-1732711080274856/">
+        <img src="images/facebook.png">
+      </a>
+      <a href="http://www.instagram.com/renewlandscapes">
+        <img src="images/instagram.jpg">
+      </a>
+    </div>
+    <p>© COPYRIGHT 2017
+      <br>RENEW LANDSCAPES.</p>
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
