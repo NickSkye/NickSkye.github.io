@@ -26,7 +26,8 @@ if (
     $mail->addAddress('digdeeper@renewlandscapes.com', 'Shelby');
     $mail->addAddress('no-reply@renewlandscapes.com');     // Add 
     $mail->addCC('nick@wbrandstudio.com');
-    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->isHTML(true);   
+    $mail->AddAttachment($_FILES['file']['tmp_name'], $_FILES['file']['name']);                               // Set email format to HTML
     $mail->Subject = 'Contact submission from site';
     $mail->Body    = '
 <html>
