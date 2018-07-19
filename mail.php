@@ -30,7 +30,7 @@ if (
     $mail->setFrom('no-reply@renewlandscapes.com', 'Mailer');
     $mail->addAddress('digdeeper@renewlandscapes.com', 'Shelby');
     $mail->addAddress('no-reply@renewlandscapes.com');     // Add 
-    $mail->addCC('nick@wbrandstudio.com');
+    $mail->addCC('michael@wollnerstudios.com');
     $mail->isHTML(true);                                  // Set email format to HTML
 
     $mail->Subject = 'Contact submission from site';

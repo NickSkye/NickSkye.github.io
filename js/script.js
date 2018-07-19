@@ -70,7 +70,7 @@ $(document).ready(function() {
   });
 
   // Gallery Modal
-  $(".gallery, .gallery--mobile").magnificPopup({
+  $(".gallery--residential, .gallery--commercial, .gallery--mobile").magnificPopup({
     delegate: "a",
     type: "image",
     tLoading: "Loading image #%curr%...",
